@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "causalkit"
+version = "0.1.0"
+description = "Causal effect estimation and identification from first principles: d separation, backdoor adjustment, IPW, AIPW, matching, E values."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+causalkit = "causalkit.__main__:main"
+
+[tool.setuptools]
+packages = ["causalkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
